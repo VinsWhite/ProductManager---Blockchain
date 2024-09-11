@@ -27,12 +27,14 @@ To use this project, ensure you have the following installed:
 Then, follow these steps:
 
 1. Open the project folder in the code editor
-2. Install the dependencies with `npm install` or `npm i`
+2. Go into server folder and install the dependencies with `npm install` or `npm i`
 3. Open Postgres (pgAdmin4) and create your local database (example: `product_manager`)
 4. Open IPFS Desktop
 5. Return to your code editor and start the development server with `npm run start`. If you prefer to use `NODEMON` for automatic restarts in development mode, use `npm run start:dev`
 6. Rename `.env.example` to `.env` and update USERNAME, PASSWORD, and DATABASE_NAME as needed
 7. Ensure the server remains running while using the app
+8. Navigate to the smartContract folder to find the ProductManager.sol file, which contains the smart contract code. 
+
 
 ## Project Structure
 

@@ -13,8 +13,10 @@ Questa applicazione backend consente agli utenti di caricare i dettagli del prod
 Vuoi leggere questo in inglese?
 - [English](README.md)
 
+
 ## Installazione
 Per impostare questo progetto localmente, clona il repository -> `git clone ...`
+
 
 ## Utilizzo
 Per utilizzare questo progetto, assicurati di avere installato:
@@ -25,12 +27,14 @@ Per utilizzare questo progetto, assicurati di avere installato:
 Segui poi questi passaggi:
 
 1. Apri la cartella del progetto nell'editor di codice
-2. Installa le dipendenze con `npm install` o `npm i`
+2. Spostati all'interno della cartella server e installa le dipendenze con `npm install` o `npm i`
 3. Apri Postgres (pgAdmin4) e crea il tuo database locale (esempio: `product_manager`)
 4. Apri IPFS Desktop
 5. Torna all'editor di codice e avvia il server di sviluppo con `npm run start`. Se preferisci usare `NODEMON` per i riavvii automatici in modalità di sviluppo, usa `npm run start:dev`
 6. Rinomina `.env.example` in `.env` e aggiorna USERNAME, PASSWORD e DATABASE_NAME come necessario
 7. Assicurati che il server rimanga in esecuzione mentre usi l'app
+8. Vai alla cartella smartContract per trovare il file ProductManager.sol, che contiene il codice dello smart contract.
+
 
 ## Struttura del Progetto
 
