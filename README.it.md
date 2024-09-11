@@ -29,7 +29,8 @@ Segui poi questi passaggi:
 3. Apri Postgres (pgAdmin4) e crea il tuo database locale (esempio: `product_manager`)
 4. Apri IPFS Desktop
 5. Torna all'editor di codice e avvia il server di sviluppo con `npm run start`. Se preferisci usare `NODEMON` per i riavvii automatici in modalità di sviluppo, usa `npm run start:dev`
-6. Assicurati che il server rimanga in esecuzione mentre usi l'app
+6. Rinomina `.env.example` in `.env` e aggiorna USERNAME, PASSWORD e DATABASE_NAME come necessario
+7. Assicurati che il server rimanga in esecuzione mentre usi l'app
 
 ## Struttura del Progetto
 
