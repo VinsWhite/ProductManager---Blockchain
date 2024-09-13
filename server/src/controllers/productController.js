@@ -25,3 +25,19 @@ export const createProduct = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+// get all products
+export const getAllProducts = async (req, res) => {
+  try {
+    const products = await prisma.product.findMany({
+      orderBy: {
+        timestamp: 'desc',
+      },
+    });
+
+    res.status(200).json({ products });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
