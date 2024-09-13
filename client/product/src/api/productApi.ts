@@ -11,4 +11,18 @@ export const getAllProducts = async () => {
         console.log(error);
         throw error;
     }
-} 
+}
+
+export const createAProduct = async (formData: FormData) => {
+    try {
+        const response = await axios.post(urlApi, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+        return response.data; 
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+};

@@ -58,6 +58,10 @@ To use this project, ensure you have the following installed:
     - client > product (main client app)
         - ... > src (main folder for client app)
             - ... > components (all app components)
+                - ... > other (minor components, e.g., ErrorDialog)
+            - ... > interface (TypeScript interfaces)
+            - ... > api (API calls)
+            - ... > functions (separeted functions)
             - ... > App.tsx (main app file)
 
 - Server

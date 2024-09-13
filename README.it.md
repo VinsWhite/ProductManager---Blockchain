@@ -58,6 +58,10 @@ Per utilizzare questo progetto, assicurati di avere installato:
     - client > product (app client principale)
         - ... > src (cartella principale dell'app client)
             - ... > components (tutti i componenti dell'app)
+                - ... > other (componenti minori come ErrorDialog)
+            - ... > interface (interfacce TypeScript)
+            - ... > api (chiamate API)
+            - ... > functions (funzioni separate)
             - ... > App.tsx (file principale dell'app)
 
 - Server 
