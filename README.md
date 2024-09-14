@@ -7,6 +7,9 @@ This backend application allows users to upload product details to a local IPFS 
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Environment Variables](#environment-variables)
+- [Error Handling](#error-handling)
 - [Project Structure](#project-structure)
 - [Author](#author)
 
@@ -51,6 +54,42 @@ To use this project, ensure you have the following installed:
 18. Navigate to the product folder
 19. Install the dependencies with `npm install` or `npm i`
 20. Start the client with `npm run dev`
+
+
+## API Endpoints
+### Save Product
+- **Endpoint:** `http://localhost:3000/products`
+- **Method:** POST
+- **Description:** Save product details and IPFS hash in the smart contract.
+
+### Get all Products
+- **Endpoint:** `http://localhost:3000/products`
+- **Method:** GET
+- **Description:**  Retrieve all products from the database.
+
+### Retrieve File from IPFS
+- **Endpoint:** `http://127.0.0.1:8080/ipfs/:hash`
+- **Method:** GET
+- **Description:**  Retrieve the file content from IPFS using the file hash.
+
+
+## Environment Variables
+- `DATABASE_URL`: URL for connecting to the PostgreSQL database.
+- `WEB3_PROVIDER`: URL for the Web3 provider.
+- `CONTRACT_ADDRESS`: Address of the deployed smart contract.
+- `CONTRACT_ABI`: ABI of the smart contract for interacting with it.
+
+
+## Error Handling
+### Common Errors
+
+- **500 Internal Server Error**
+  - **Cause:** This error usually occurs due to issues with the server or the configuration.
+  - **Solution:** Check the server logs for detailed error messages and ensure all services are running correctly.
+
+- **400 Bad Request**
+  - **Cause:** This error occurs when the request data is invalid or missing required fields.
+  - **Solution:** Ensure that all required fields are provided in the request body and that the data is formatted correctly.
 
 
 ## Project Structure

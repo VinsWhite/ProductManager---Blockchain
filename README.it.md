@@ -7,6 +7,9 @@ Questa applicazione backend consente agli utenti di caricare i dettagli del prod
 - [Descrizione](#descrizione)
 - [Installazione](#installazione)
 - [Utilizzo](#utilizzo)
+- [API Endpoints](#api-endpoints)
+- [Variabili d'Ambiente](#variabili-dambiente)
+- [Gestione degli errori](#gestione-degli-errori)
 - [Struttura del Progetto](#struttura-del-progetto)
 - [Autore](#autore)
 
@@ -51,6 +54,44 @@ Per utilizzare questo progetto, assicurati di avere installato:
 18. Naviga nella cartella product
 19. Installa le dipendenze con `npm install` o `npm i`
 20. Avvia il client con `npm run dev`
+
+
+## API Endpoints
+
+### Salva Prodotto
+- **Endpoint:** `http://localhost:3000/products`
+- **Metodo:** POST
+- **Descrizione:** Salva i dettagli del prodotto e l'hash IPFS nello smart contract.
+
+### Ottieni tutti i Prodotti
+- **Endpoint:** `http://localhost:3000/products`
+- **Metodo:** GET
+- **Descrizione:** Recupera tutti i prodotti dal database.
+
+### Recupera File da IPFS
+- **Endpoint:** `http://127.0.0.1:8080/ipfs/:hash`
+- **Metodo:** GET
+- **Descrizione:** Recupera il contenuto del file da IPFS utilizzando l'hash del file.
+
+
+## Variabili d'Ambiente
+- `DATABASE_URL`: URL per connettersi al database PostgreSQL.
+- `WEB3_PROVIDER`: URL per il provider Web3.
+- `CONTRACT_ADDRESS`: Indirizzo dello smart contract distribuito.
+- `CONTRACT_ABI`: ABI dello smart contract per interagire con esso.
+
+
+## Gestione degli Errori
+### Errori Comuni
+
+- **500 Internal Server Error**
+  - **Causa:** Questo errore di solito si verifica a causa di problemi con il server o con la configurazione.
+  - **Soluzione:** Controlla i log del server per messaggi di errore dettagliati e assicurati che tutti i servizi siano in esecuzione correttamente.
+
+- **400 Bad Request**
+  - **Causa:** Questo errore si verifica quando i dati della richiesta sono invalidi o mancano dei campi richiesti.
+  - **Soluzione:** Assicurati che tutti i campi richiesti siano forniti nel corpo della richiesta e che i dati siano formattati correttamente.
+
 
 
 ## Struttura del Progetto
