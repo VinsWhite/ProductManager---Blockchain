@@ -2,6 +2,7 @@ import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import ErrorDialog from "./other/ErrorDialog";
 import { createAProduct } from "../api/productApi";
 import ScrollToTop from "../functions/scrollToTop";
+import CreatedDialog from "./other/CreatedDialog";
 
 export default function CreateProductComp() {
   const [name, setName] = useState<string>("");
@@ -10,6 +11,7 @@ export default function CreateProductComp() {
   const [productFile, setProductFile] = useState<File | null>(null);
   const [fillDialog, setFillDialog] = useState<boolean>(false);
   const [missingFields, setMissingFields] = useState<string[]>([]);
+  const [created, setCreated] = useState<boolean>(false); // to open a dialog (created product)
 
   useEffect(() => {
     ScrollToTop();
@@ -29,6 +31,9 @@ export default function CreateProductComp() {
     if (newMissingFields.length > 0) {
       setMissingFields(newMissingFields);
       setFillDialog(true);
+      setTimeout(() => {
+        setFillDialog(false)
+      }, 4000);
     } else {
       const create = async () => {
         try {
@@ -42,6 +47,11 @@ export default function CreateProductComp() {
 
           const response = await createAProduct(formData); 
           console.log("Product created:", response);
+          setCreated(true);
+
+          setInterval(() => {
+            setCreated(false);
+          }, 3000);
 
         } catch (error) {
           console.error("Error creating product:", error);
@@ -105,6 +115,9 @@ export default function CreateProductComp() {
           </div>
           {fillDialog && (
             <ErrorDialog missingFields={missingFields} />
+          )}
+          {created && (
+            <CreatedDialog />
           )}
           <button type="submit" className="bg-yellow-500 text-white px-4 py-2 rounded">
             Create Product

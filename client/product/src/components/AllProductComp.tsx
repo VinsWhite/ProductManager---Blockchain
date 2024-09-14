@@ -25,7 +25,7 @@ export default function AllProductComp() {
   }, []);
 
   return (
-    <div className="p-4 h-screen select-none">
+    <div className={`p-4 select-none ${products.length >= 9 ? 'h-full' : 'h-screen'}`}>
       <h2 className="text-3xl my-3">All products:</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {loading && (
